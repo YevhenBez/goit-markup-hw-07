@@ -20,7 +20,7 @@
     --accent-bg-color: #188CE8;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -59,7 +59,7 @@ ul {
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-}
+} */
 
 .logo {
     color: var(--accent-color);
