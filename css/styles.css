@@ -20,6 +20,8 @@
     --accent-bg-color: #188CE8;
 }
 
+/* SETTINGS hometask 7 */
+
 /* h1,
 h2,
 h3,
@@ -61,7 +63,9 @@ ul {
     margin: 0 auto;
 } */
 
-.logo {
+/* HEADER hometask 7 */
+
+/* .logo {
     color: var(--accent-color);
 
     font-family: Raleway, sans-serif;
@@ -82,7 +86,7 @@ ul {
 
 /* Site nav */
 
-.page-header {
+/* .page-header {
     border-bottom: 1px solid #ECECEC;
 }
 
@@ -206,11 +210,11 @@ ul {
 .contacts-list a:focus .header-mail,
 .contacts-list a:focus .header-tel {
     fill: currentColor;
-}
+} */
 
-/* Hero */
+/* HERO hometask 7*/
 
-.hero {
+/* .hero {
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
@@ -250,11 +254,11 @@ ul {
     letter-spacing: 0.06em;
 
     cursor: pointer;
-}
+} */
 
-/* Features */
+/* FEATURES hometask 7 */
 
-.features-list {
+/* .features-list {
     display: flex;
 }
 
@@ -290,11 +294,11 @@ ul {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
-}
+} */
 
-/* works and Staff */
+/* WORKS AND STAFF hometask 7*/
 
-.section-works {
+/* .section-works {
     padding-top: 0px;
 }
 
@@ -424,11 +428,11 @@ ul {
 
 .link-icon:focus .staff-icon {
     fill: var(--icon-accent);
-}
+} */
 
-/* Clients */
+/* CLIENTS hometask 7*/
 
-.clients-title {
+/* .clients-title {
     color: var(--title-text-color);
 
     font-weight: 700;
@@ -486,7 +490,7 @@ ul {
 
 .clients-link:focus .clients-icon {
     fill: var(--accent-color);
-}
+} */
 
 /* Button */
 

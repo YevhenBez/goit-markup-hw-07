@@ -1,0 +1,37 @@
+.features-list {
+    display: flex;
+}
+
+.feature-item {
+    width: 270px;
+}
+
+.features-list .feature-item+.feature-item {
+    margin-left: 30px;
+}
+
+.feature-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+
+    background: var(--icon-feature);
+    border-radius: 4px;
+}
+
+.features-list .title {
+    margin-bottom: 10px;
+    color: var(--title-text-color);
+
+    font-size: 14px;
+    line-height: 1.14;
+}
+
+.features-list .text {
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+}
