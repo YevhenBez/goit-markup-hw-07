@@ -1,6 +1,9 @@
 /* цвет основного текста #212121 */
 /* вторичный цвет текста #757575 */
-:root {
+
+/* VARIABLES hometask 7 */
+
+/* :root {
     --primary-text-color: #757575;
     --title-text-color: #212121;
     --accent-color: #2196F3;
@@ -18,7 +21,7 @@
     --error: #eaed3b;
     --border-backdrop: rgba(33, 33, 33, 0.2);
     --accent-bg-color: #188CE8;
-}
+} */
 
 /* SETTINGS hometask 7 */
 
@@ -492,9 +495,9 @@ ul {
     fill: var(--accent-color);
 } */
 
-/* Button */
+/* BUTTON hometask 7 */
 
-.button {
+/* .button {
     display: inline-block;
     padding: 6px 22px;
     border-radius: 4px;
@@ -544,13 +547,13 @@ ul {
 .button-all {
     padding: 6px 25px;
     min-width: 73px;
-}
+} */
 
 
 
-/* filter */
+/* FILTER hometask 7*/
 
-.filter a {
+/* .filter a {
     text-decoration: none;
 }
 
@@ -644,11 +647,11 @@ ul {
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
-}
+} */
 
-/* Footer */
+/* FOOTER hometask 7 */
 
-.section-footer {
+/* .section-footer {
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--hero-bg-color);
@@ -863,11 +866,11 @@ ul {
     right: 28px;
     top: 50%;
     transform: translateY(-50%);
-}
+} */
 
-/* modal window */
+/* MODAL WINDOW hometask 7*/
 
-.backdrop {
+/* .backdrop {
     position: fixed;
     top: 0;
     width: 100%;
@@ -1202,4 +1205,4 @@ ul {
 .modal-btn:hover,
 .modal-btn:focus {
     background-color: var(--accent-bg-color);
-}
+} */
