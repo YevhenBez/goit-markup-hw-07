@@ -57,11 +57,10 @@
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button-modal:hover .modal-close,
-.button-modal:focus .modal-close {
-    fill: var(--accent-color);
+    .button-modal:hover &,
+    .button-modal:focus & {
+            fill: var(--accent-color);
+        }
 }
 
 .backdrop-title {

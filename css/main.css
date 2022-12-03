@@ -334,6 +334,12 @@ ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.link-icon:hover .staff-icon {
+  fill: var(--icon-accent);
+}
+.link-icon:focus .staff-icon {
+  fill: var(--icon-accent);
+}
 
 .link-icon {
   width: 44px;
@@ -347,19 +353,9 @@ ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.link-icon:hover,
-.link-icon:focus {
+.link-icon:hover, .link-icon:focus {
   background-color: var(--icon-bg-hover);
   outline: none;
-}
-
-.link-icon:hover .staff-icon {
-  fill: var(--icon-accent);
-}
-
-.link-icon:focus .staff-icon {
-  fill: var(--icon-accent);
 }
 
 .clients-title {
@@ -831,9 +827,7 @@ ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.button-modal:hover .modal-close,
-.button-modal:focus .modal-close {
+.button-modal:hover .modal-close, .button-modal:focus .modal-close {
   fill: var(--accent-color);
 }
 

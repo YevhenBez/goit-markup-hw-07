@@ -100,6 +100,12 @@
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    .link-icon:hover & {
+            fill: var(--icon-accent);
+        }
+    .link-icon:focus & {
+            fill: var(--icon-accent);
+        }
 }
 
 .link-icon {
@@ -114,18 +120,9 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link-icon:hover,
-.link-icon:focus {
-    background-color: var(--icon-bg-hover);
-    outline: none;
-}
-
-.link-icon:hover .staff-icon {
-    fill: var(--icon-accent);
-}
-
-.link-icon:focus .staff-icon {
-    fill: var(--icon-accent);
+    &:hover,
+    &:focus {
+            background-color: var(--icon-bg-hover);
+            outline: none;
+        }
 }
