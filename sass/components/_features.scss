@@ -2,15 +2,15 @@
     display: flex;
 }
 
-.feature-item {
+.features-list__item {
     width: 270px;
 }
 
-.features-list .feature-item+.feature-item {
+.features-list .features-list__item+.features-list__item {
     margin-left: 30px;
 }
 
-.feature-link {
+.features-list__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +21,7 @@
     border-radius: 4px;
 }
 
-.features-list .title {
+.features-list .features-list__title {
     margin-bottom: 10px;
     color: var(--title-text-color);
 
