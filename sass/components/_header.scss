@@ -56,13 +56,13 @@
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.page-header__site-nav a:hover,
-.page-header__site-nav a:focus,
-.page-header__site-nav a:active {
-    color: var(--accent-color);
-    outline: none;
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--accent-color);
+        outline: none;
+    }
 }
 
 .page-header__site-nav .page-header__link-current {

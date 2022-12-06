@@ -1,3 +1,28 @@
+.backdrop-mail, .backdrop-tel, .backdrop-name {
+  width: 100%;
+  height: 40px;
+  color: var(--green);
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  padding-left: 42px;
+  border: 1px solid var(--border-backdrop);
+  border-radius: 4px;
+  outline: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-mail, .icon-tel, .icon-person {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 h1,
 h2,
 h3,
@@ -90,10 +115,7 @@ ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.page-header__site-nav a:hover,
-.page-header__site-nav a:focus,
-.page-header__site-nav a:active {
+.page-header__site-nav a:hover, .page-header__site-nav a:focus, .page-header__site-nav a:active {
   color: var(--accent-color);
   outline: none;
 }
@@ -212,9 +234,7 @@ ul {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
 }
-
-.hero__button:hover,
-.hero__button:focus {
+.hero__button:hover, .hero__button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: var(--accent-bg-color);
 }
@@ -865,59 +885,39 @@ ul {
   transform: translateY(-50%);
 }
 
-.backdrop-name,
-.backdrop-tel,
-.backdrop-mail {
-  width: 100%;
-  height: 40px;
-  color: var(--green);
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  padding-left: 42px;
-  border: 1px solid var(--border-backdrop);
-  border-radius: 4px;
-  outline: transparent;
-  background-color: transparent;
-  cursor: pointer;
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop-name:hover,
-.backdrop-name:focus,
-.backdrop-tel:hover,
-.backdrop-tel:focus,
-.backdrop-mail:hover,
-.backdrop-mail:focus,
-.modal-comment:hover,
-.modal-comment:focus {
+.backdrop-name:hover, .backdrop-name:focus {
   border-color: var(--accent-color);
 }
+.backdrop-name:not(:focus):invalid {
+  color: var(--mistake);
+  font-weight: 900;
+}
 
-.backdrop-name:not(:focus):invalid,
-.backdrop-tel:not(:focus):invalid,
+.backdrop-tel:hover, .backdrop-tel:focus {
+  border-color: var(--accent-color);
+}
+.backdrop-tel:not(:focus):invalid {
+  color: var(--mistake);
+  font-weight: 900;
+}
+
+.backdrop-mail:hover, .backdrop-mail:focus {
+  border-color: var(--accent-color);
+}
 .backdrop-mail:not(:focus):invalid {
   color: var(--mistake);
   font-weight: 900;
 }
 
-.icon-person,
-.icon-tel,
-.icon-mail {
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.backdrop-name:hover + .icon-person, .backdrop-name:focus + .icon-person {
+  fill: var(--accent-color);
 }
 
-.backdrop-name:hover + .icon-person,
-.backdrop-name:focus + .icon-person,
-.backdrop-tel:hover + .icon-tel,
-.backdrop-tel:focus + .icon-tel,
-.backdrop-mail:hover + .icon-mail,
-.backdrop-mail:focus + .icon-mail {
+.backdrop-tel:hover + .icon-tel, .backdrop-tel:focus + .icon-tel {
+  fill: var(--accent-color);
+}
+
+.backdrop-mail:hover + .icon-mail, .backdrop-mail:focus + .icon-mail {
   fill: var(--accent-color);
 }
 
@@ -962,7 +962,9 @@ ul {
   resize: none;
   margin-bottom: 20px;
 }
-
+.modal-comment:hover, .modal-comment:focus {
+  border-color: var(--accent-color);
+}
 .modal-comment::-moz-placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-family: Roboto;
@@ -971,7 +973,6 @@ ul {
   line-height: 1.16;
   letter-spacing: 0.01em;
 }
-
 .modal-comment:-ms-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-family: Roboto;
@@ -980,7 +981,6 @@ ul {
   line-height: 1.16;
   letter-spacing: 0.01em;
 }
-
 .modal-comment::placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-family: Roboto;
@@ -992,12 +992,6 @@ ul {
 
 .modal-check {
   display: none;
-}
-
-.modal-check:checked + .modal-agreement span {
-  background-color: var(--accent-color);
-  fill: var(--icon-accent);
-  border: none;
 }
 
 .check-agreement {
@@ -1028,6 +1022,11 @@ ul {
   justify-content: center;
   margin-right: 8.38px;
   fill: transparent;
+}
+.modal-check:checked + .modal-agreement span {
+  background-color: var(--accent-color);
+  fill: var(--icon-accent);
+  border: none;
 }
 
 .agreement {
@@ -1063,9 +1062,7 @@ ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal-btn:hover,
-.modal-btn:focus {
+.modal-btn:hover, .modal-btn:focus {
   background-color: var(--accent-bg-color);
 }
 

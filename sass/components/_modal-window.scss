@@ -109,70 +109,64 @@
     transform: translateY(-50%);
 }
 
-.backdrop-name,
-.backdrop-tel,
+.backdrop-name {
+    @extend %name-tel-mail;
+    &:hover,
+    &:focus {
+        border-color: var(--accent-color);
+    }
+    &:not(:focus):invalid {
+        color: var(--mistake);
+        font-weight: 900
+    }
+}
+
+.backdrop-tel {
+    @extend %name-tel-mail;
+    &:hover,
+    &:focus {
+        border-color: var(--accent-color);
+    }
+    &:not(:focus):invalid {
+        color: var(--mistake);
+        font-weight: 900
+    }
+}
+
 .backdrop-mail {
-    width: 100%;
-    height: 40px;
-
-    color: var(--green);
-
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-
-    padding-left: 42px;
-    border: 1px solid var(--border-backdrop);
-    border-radius: 4px;
-
-    outline: transparent;
-
-    background-color: transparent;
-
-    cursor: pointer;
-
-    transition-property: border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %name-tel-mail;
+    &:hover,
+    &:focus {
+            border-color: var(--accent-color);
+    }
+    &:not(:focus):invalid {
+        color: var(--mistake);
+        font-weight: 900
+    }
 }
 
-
-.backdrop-name:hover,
-.backdrop-name:focus,
-.backdrop-tel:hover,
-.backdrop-tel:focus,
-.backdrop-mail:hover,
-.backdrop-mail:focus,
-.modal-comment:hover,
-.modal-comment:focus {
-    border-color: var(--accent-color);
+.icon-person {
+    @extend %person-tel-mail;
+    .backdrop-name:hover+&,
+    .backdrop-name:focus+& {
+        fill: var(--accent-color);
+    }
 }
 
-
-
-.backdrop-name:not(:focus):invalid,
-.backdrop-tel:not(:focus):invalid,
-.backdrop-mail:not(:focus):invalid {
-    color: var(--mistake);
-    font-weight: 900
+.icon-tel {
+    @extend %person-tel-mail;
+    .backdrop-tel:hover+&,
+    .backdrop-tel:focus+& {
+        fill: var(--accent-color);
+    }
 }
 
-.icon-person,
-.icon-tel,
 .icon-mail {
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop-name:hover+.icon-person,
-.backdrop-name:focus+.icon-person,
-.backdrop-tel:hover+.icon-tel,
-.backdrop-tel:focus+.icon-tel,
-.backdrop-mail:hover+.icon-mail,
-.backdrop-mail:focus+.icon-mail {
-    fill: var(--accent-color);
+    @extend %person-tel-mail;
+    .backdrop-mail:hover+&,
+    .backdrop-mail:focus+& {
+        fill: var(--accent-color);
+    }
 }
 
 .person-tel {
@@ -227,27 +221,26 @@
     resize: none;
 
     margin-bottom: 20px;
-}
 
-.modal-comment::placeholder {
-    color: rgba(117, 117, 117, 0.5);
+    &:hover,
+    &:focus {
+        border-color: var(--accent-color);
+    }
 
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.16;
-
-    letter-spacing: 0.01em;
+    &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+    
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.16;
+    
+        letter-spacing: 0.01em;
+        }
 }
 
 .modal-check {
     display: none;
-}
-
-.modal-check:checked+.modal-agreement span {
-    background-color: var(--accent-color);
-    fill: var(--icon-accent);
-    border: none;
 }
 
 .check-agreement {
@@ -282,6 +275,12 @@
     justify-content: center;
     margin-right: 8.38px;
     fill: transparent;
+
+    .modal-check:checked+& {
+        background-color: var(--accent-color);
+        fill: var(--icon-accent);
+        border: none;
+    }
 }
 
 .agreement {
@@ -327,9 +326,9 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-btn:hover,
-.modal-btn:focus {
-    background-color: var(--accent-bg-color);
+    &:hover,
+    &:focus {
+        background-color: var(--accent-bg-color);
+    }
 }
