@@ -34,12 +34,11 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-}
-
-.clients-link:hover,
-.clients-link:focus {
-    border: 1px solid var(--accent-color);
-    outline: none;
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent-color);
+        outline: none;
+    }
 }
 
 .clients-icon {
@@ -48,12 +47,12 @@
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.clients-link:hover .clients-icon {
-    fill: var(--accent-color);
-}
-
-.clients-link:focus .clients-icon {
-    fill: var(--accent-color);
+    .clients-link:hover & {
+        fill: var(--accent-color);
+    }
+    
+    .clients-link:focus & {
+        fill: var(--accent-color);
+    }
 }

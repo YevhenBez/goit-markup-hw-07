@@ -91,16 +91,16 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: var(--icon-bg-hover);
+        outline: none;
+    }
 }
 
 .footer-icon {
     fill: var(--icon-accent);
-}
-
-.footer-link-icon:hover,
-.footer-link-icon:focus {
-    background-color: var(--icon-bg-hover);
-    outline: none;
 }
 
 .footer-text {
@@ -144,35 +144,31 @@
     transition-property: border-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-in-mail::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-
-    letter-spacing: 0.03em;
-}
-
-.footer-in-mail:not(:focus):not(:placeholder-shown):invalid {
-    background-color: var(--mistake);
-}
-
-.footer-in-mail:focus,
-.footer-in-mail:hover {
-    border-color: var(--accent-color);
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+    
+        letter-spacing: 0.03em;
+    }
+    &:not(:focus):not(:placeholder-shown):invalid {
+        background-color: var(--mistake);
+    }
+    &:focus,
+    &:hover {
+        border-color: var(--accent-color);
+    }
+    &:not(:focus):not(:placeholder-shown):invalid+.error {
+        display: block;
+    }
 }
 
 .error {
     color: var(--error);
     display: none;
-}
-
-.footer-in-mail:not(:focus):not(:placeholder-shown):invalid+.error {
-    display: block;
 }
 
 .footer-btn-mailing {
@@ -200,11 +196,10 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-btn-mailing:hover,
-.footer-btn-mailing:focus {
-    background-color: var(--accent-bg-color);
+    &:hover,
+    &:focus {
+        background-color: var(--accent-bg-color);
+    }
 }
 
 .icon-plane {

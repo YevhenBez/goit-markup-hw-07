@@ -6,23 +6,17 @@
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.filter-link:hover,
-.filter-link:focus {
-    display: block;
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
-    outline: none;
+    &:hover,
+    &:focus {
+        display: block;
+        box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+        outline: none;
+    }
 }
 
 .img-card {
     position: relative;
     overflow: hidden;
-}
-
-.filter-link:hover .filter-card-text,
-.filter-link:focus .filter-card-text {
-    transform: translateY(0);
 }
 
 .filter-card-text {
@@ -45,6 +39,11 @@
     transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    .filter-link:hover &,
+    .filter-link:focus & {
+        transform: translateY(0);
+    }
 }
 
 .filter-title {

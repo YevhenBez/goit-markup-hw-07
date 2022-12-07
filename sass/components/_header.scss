@@ -116,31 +116,30 @@
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--accent-color);
+        outline: none;
+    }
 }
 
-.page-header__mail,
+.page-header__mail {
+    @extend %page-header__mail-tel;
+    .page-header__contacts-list a:hover & {
+        fill: currentColor;
+    }
+        .page-header__contacts-list a:focus & {
+                fill: currentColor;
+            }
+}
+
 .page-header__tel {
-    fill: var(--primary-text-color);
-    margin-right: 10px;
-
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.page-header__contacts-list a:hover,
-.page-header__contacts-list a:focus,
-.page-header__contacts-list a:active {
-    color: var(--accent-color);
-    outline: none;
-}
-
-.page-header__contacts-list a:hover .page-header__mail,
-.page-header__contacts-list a:hover .page-header__tel {
-    fill: currentColor;
-}
-
-.page-header__contacts-list a:focus .page-header__mail,
-.page-header__contacts-list a:focus .page-header__tel {
-    fill: currentColor;
+    @extend %page-header__mail-tel;
+    .page-header__contacts-list a:hover & {
+        fill: currentColor;
+    }
+    .page-header__contacts-list a:focus & {
+        fill: currentColor;
+    }
 }
