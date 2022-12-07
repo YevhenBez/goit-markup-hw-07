@@ -17,3 +17,11 @@
     --border-backdrop: rgba(33, 33, 33, 0.2);
     --accent-bg-color: #188CE8;
 }
+
+@mixin font($ff, $fw, $fs, $lh, $ls) {
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+}

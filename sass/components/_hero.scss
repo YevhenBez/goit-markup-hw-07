@@ -16,9 +16,7 @@
     margin-bottom: 30px;
     color: var(--button-accent-color);
 
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    @include font(null, 900, 44px, 1.36, null);
 
     text-align: center;
     letter-spacing: 0.06em;
@@ -35,11 +33,7 @@
     min-width: 216px;
     border: 0px;
 
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-
-    letter-spacing: 0.06em;
+    @include font(null, 700, 16px, 1.87, 0.06em);
 
     cursor: pointer;
 

@@ -54,9 +54,8 @@
 .list-contacts .link {
 
     font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+
+    @include font(null, 400, 14px, 1.71, null);
 }
 
 .footer-join {
@@ -65,10 +64,9 @@
 
 .footer-title {
     color: var(--icon-accent);
-    font-family: Roboto;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+
+    @include font(Roboto, 700, 14px, 1.14, null);
+    
     text-transform: uppercase;
 
     margin-bottom: 20px;
@@ -105,10 +103,9 @@
 
 .footer-text {
     color: var(--icon-accent);
-    font-family: Roboto;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+
+    @include font(Roboto, 700, 14px, 1.14, null);
+    
     text-transform: uppercase;
 
     margin-bottom: 20px;
@@ -128,12 +125,7 @@
     background-color: transparent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-
-    letter-spacing: 0.03em;
+    @include font(Roboto, 400, 16px, 1.25, 0.03em);
 
     outline: transparent;
 
@@ -146,13 +138,8 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     &::placeholder {
         color: rgba(255, 255, 255, 0.6);
-    
-        font-family: Roboto;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.25;
-    
-        letter-spacing: 0.03em;
+
+        @include font(Roboto, 400, 16px, 1.25, 0.03em);
     }
     &:not(:focus):not(:placeholder-shown):invalid {
         background-color: var(--mistake);
@@ -184,12 +171,7 @@
     background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-    font-family: Roboto;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-
-    letter-spacing: 0.06em;
+    @include font(Roboto, 700, 16px, 1.87, 0.06em);
 
     cursor: pointer;
 

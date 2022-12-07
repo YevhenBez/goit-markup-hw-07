@@ -6,6 +6,7 @@
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
     &:hover,
     &:focus {
         display: block;
@@ -29,10 +30,8 @@
 
     transform: translateY(100%);
 
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.55;
+    @include font(Roboto, 400, 18px, 1.55, null);
+
     color: var(--button-accent-color);
     background-color: rgba(33, 150, 243, 0.9);
 
@@ -50,18 +49,14 @@
     margin-bottom: 4px;
     color: var(--title-text-color);
 
-    font-size: 18px;
-    line-height: 2;
-
-    letter-spacing: 0.06em;
+    @include font(null, null, 18px, 2, 0.06em);
 }
 
 .filter-text {
     color: var(--primary-text-color);
 
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.87;
+    @include font(null, 400, 16px, 1.87, null);
+
     text-decoration: none;
 }
 

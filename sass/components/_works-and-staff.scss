@@ -22,10 +22,8 @@
     color: var(--icon-accent);
     padding: 27px 0px;
 
-    font-family: Roboto;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+    @include font(Roboto, 700, 14px, 1.14, null);
+
     text-transform: uppercase;
     background-color: rgba(47, 48, 58, 0.8);
 
@@ -45,8 +43,8 @@
     margin-bottom: 50px;
     color: var(--title-text-color);
 
-    font-size: 36px;
-    line-height: 1.16;
+    @include font(null, null, 36px, 1.16, null);
+
     text-align: center;
 }
 
@@ -75,16 +73,12 @@
 
     color: var(--title-text-color);
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-
+    @include font(null, 500, 16px, 1.19, null);
 }
 
 .staff .text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.19;
+    @include font(null, 400, 16px, 1.19, null);
+    
     margin-bottom: 16px;
 }
 
